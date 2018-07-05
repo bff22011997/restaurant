@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UITableView+DragLoad.h"
 
-@interface FoodViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@interface FoodViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,UITableViewDragLoadDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tblView;
 @property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @property (strong,nonatomic) NSString *tableNumber;

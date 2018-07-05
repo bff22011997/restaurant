@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,13 +24,20 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAf-x9-l2X">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_menu.png" translatesAutoresizingMaskIntoConstraints="NO" id="00J-nf-Ybq">
+                            <rect key="frame" x="10" y="30" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="24" id="SW1-EN-yrx"/>
+                                <constraint firstAttribute="height" constant="24" id="lyb-fc-kT7"/>
+                            </constraints>
+                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEf-n1-cbc">
                             <rect key="frame" x="0.0" y="20" width="44" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="44" id="QZX-FX-XAm"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <state key="normal" title="Logout">
+                            <state key="normal">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -66,12 +73,14 @@
                         <constraint firstAttribute="trailing" secondItem="emZ-fb-6N0" secondAttribute="trailing" id="CTn-Zt-nc0"/>
                         <constraint firstItem="ZEf-n1-cbc" firstAttribute="leading" secondItem="CAf-x9-l2X" secondAttribute="leading" id="LOI-TM-5EK"/>
                         <constraint firstItem="rly-rz-POT" firstAttribute="centerX" secondItem="emZ-fb-6N0" secondAttribute="centerX" id="ObD-jZ-49g"/>
+                        <constraint firstItem="00J-nf-Ybq" firstAttribute="centerX" secondItem="ZEf-n1-cbc" secondAttribute="centerX" id="SIq-1L-UtA"/>
                         <constraint firstItem="poB-Kx-WIu" firstAttribute="leading" secondItem="ZEf-n1-cbc" secondAttribute="trailing" constant="5" id="SLj-FZ-ckf"/>
                         <constraint firstItem="rly-rz-POT" firstAttribute="centerY" secondItem="emZ-fb-6N0" secondAttribute="centerY" id="ZRz-dB-pj2"/>
                         <constraint firstItem="poB-Kx-WIu" firstAttribute="centerY" secondItem="ZEf-n1-cbc" secondAttribute="centerY" id="bDd-m8-IgX"/>
                         <constraint firstItem="emZ-fb-6N0" firstAttribute="top" secondItem="CAf-x9-l2X" secondAttribute="top" constant="20" id="hZ0-R0-84O"/>
                         <constraint firstAttribute="trailing" secondItem="poB-Kx-WIu" secondAttribute="trailing" constant="49" id="k52-oX-usw"/>
                         <constraint firstAttribute="bottom" secondItem="emZ-fb-6N0" secondAttribute="bottom" id="lCT-qu-tBf"/>
+                        <constraint firstItem="00J-nf-Ybq" firstAttribute="centerY" secondItem="ZEf-n1-cbc" secondAttribute="centerY" id="lDW-j2-z4F"/>
                         <constraint firstAttribute="height" constant="64" id="naf-5x-Zlp"/>
                         <constraint firstItem="ZEf-n1-cbc" firstAttribute="top" secondItem="CAf-x9-l2X" secondAttribute="top" constant="20" id="wd6-A7-e6K"/>
                     </constraints>
@@ -119,5 +128,6 @@
     </objects>
     <resources>
         <image name="ic_cart.png" width="65" height="65"/>
+        <image name="ic_menu.png" width="24" height="24"/>
     </resources>
 </document>

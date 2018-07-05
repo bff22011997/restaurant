@@ -15,6 +15,7 @@
 #import "AboutViewController.h"
 #import "ListPaymentViewController.h"
 #import "DatabaseManager.h"
+#import "AppDelegate.h"
 
 @interface LoginViewController ()
 
@@ -133,19 +134,20 @@
 #pragma mark Login
 -(void) login {
     if ([_txtUsername.text isEqualToString:@"admin"] && [_txtPassword.text isEqualToString:@"admin"]) {
-        ListPaymentViewController *list = [[ListPaymentViewController alloc]init];
-        [self.navigationController pushViewController:list animated:true];
+        
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"check"];
         [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"check"];
+        AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        [appdelegate checkViewHome];
     } else {
         for (int i=0; i<arrUser.count; i++) {
             User *u = [arrUser objectAtIndex:i];
             if ([_txtUsername.text isEqualToString:u.Username] && [_txtPassword.text isEqualToString:u.Password]) {
-                HomeViewController *home = [[HomeViewController alloc]init];
                 j = 1;
                 [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"check"];
                 [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"check"];
-                [self.navigationController pushViewController:home animated:true];
+                AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                [appdelegate checkViewHome];
                 break;
                 
             }

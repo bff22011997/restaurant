@@ -11,6 +11,7 @@
 #import "ListUserViewController.h"
 #import "HistoryViewController.h"
 #import "AppDelegate.h"
+#import "SWRevealViewController.h"
 
 @interface ListPaymentViewController ()
 
@@ -30,31 +31,7 @@
 }
 #pragma mark Logout
 - (IBAction)onBack:(id)sender {
-    UIAlertController * alert=[UIAlertController alertControllerWithTitle:@"NOTIFICATION"
-        message:@"Do you want logout"
-        preferredStyle:UIAlertControllerStyleAlert];
-    
-    UIAlertAction* yesButton = [UIAlertAction actionWithTitle:@"YES"
-                                                        style:UIAlertActionStyleDefault
-                                                      handler:^(UIAlertAction * action)
-                                {
-                                    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"check"];
-                                    [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:@"check"];
-                                    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-                                    [appdelegate checkViewLogin];
-                                }];
-    
-    UIAlertAction* noButton = [UIAlertAction actionWithTitle:@"NO"
-                                                       style:UIAlertActionStyleDefault
-                                                     handler:^(UIAlertAction * action)
-                               {
-                                   
-                               }];
-    
-    [alert addAction:yesButton];
-    [alert addAction:noButton];
-    
-    [self presentViewController:alert animated:YES completion:nil];
+     [self.revealViewController revealToggleAnimated:true];
 }
 - (IBAction)onListPayment:(id)sender {
     HistoryViewController *his = [[HistoryViewController alloc]init];

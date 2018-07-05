@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,12 +23,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYR-sC-gWE">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2m9-cC-kq0">
-                            <rect key="frame" x="0.0" y="20" width="60" height="44"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_menu.png" translatesAutoresizingMaskIntoConstraints="NO" id="65E-XJ-0ct">
+                            <rect key="frame" x="10" y="30" width="24" height="24"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="60" id="d3A-Ne-npb"/>
+                                <constraint firstAttribute="width" constant="24" id="DLW-cQ-BrT"/>
+                                <constraint firstAttribute="height" constant="24" id="Y1T-fL-Rb5"/>
                             </constraints>
-                            <state key="normal" title="Logout">
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2m9-cC-kq0">
+                            <rect key="frame" x="0.0" y="20" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="d3A-Ne-npb"/>
+                            </constraints>
+                            <state key="normal">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -52,7 +59,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o29-z1-xGA">
-                            <rect key="frame" x="65" y="32" width="261" height="20.5"/>
+                            <rect key="frame" x="49" y="32" width="277" height="20.5"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
@@ -65,6 +72,8 @@
                         <constraint firstItem="0XI-Rx-YNH" firstAttribute="centerX" secondItem="TVd-3w-gZW" secondAttribute="centerX" id="8s1-jj-n65"/>
                         <constraint firstAttribute="bottom" secondItem="2m9-cC-kq0" secondAttribute="bottom" id="ExH-2P-MgH"/>
                         <constraint firstAttribute="trailing" secondItem="TVd-3w-gZW" secondAttribute="trailing" id="Fdg-6G-E6v"/>
+                        <constraint firstItem="65E-XJ-0ct" firstAttribute="centerX" secondItem="2m9-cC-kq0" secondAttribute="centerX" id="MRu-LP-qjc"/>
+                        <constraint firstItem="65E-XJ-0ct" firstAttribute="centerY" secondItem="2m9-cC-kq0" secondAttribute="centerY" id="Zj0-uX-QSK"/>
                         <constraint firstItem="2m9-cC-kq0" firstAttribute="centerY" secondItem="TVd-3w-gZW" secondAttribute="centerY" id="dey-4O-x32"/>
                         <constraint firstItem="TVd-3w-gZW" firstAttribute="top" secondItem="DYR-sC-gWE" secondAttribute="top" constant="20" id="gRo-hI-IJm"/>
                         <constraint firstItem="2m9-cC-kq0" firstAttribute="leading" secondItem="DYR-sC-gWE" secondAttribute="leading" id="n0a-Uc-ss1"/>
@@ -103,6 +112,7 @@
         </view>
     </objects>
     <resources>
+        <image name="ic_menu.png" width="24" height="24"/>
         <image name="ic_refresh.png" width="108" height="108"/>
     </resources>
 </document>
