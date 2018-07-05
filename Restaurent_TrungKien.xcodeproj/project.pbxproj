@@ -43,6 +43,25 @@
 		BC4B015B20C9845500C3F18B /* HistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4B015920C9845500C3F18B /* HistoryTableViewCell.m */; };
 		BC4B015C20C9845500C3F18B /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC4B015A20C9845500C3F18B /* HistoryTableViewCell.xib */; };
 		BC4B016020C9861100C3F18B /* history.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4B015F20C9861100C3F18B /* history.m */; };
+		BC7B288420EE5EDD006D471A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7B288320EE5EDD006D471A /* QuartzCore.framework */; };
+		BC7B28A520EE658F006D471A /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B28A120EE658E006D471A /* UIScrollView+SVPullToRefresh.m */; };
+		BC7B28A620EE658F006D471A /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B28A420EE658F006D471A /* UIScrollView+SVInfiniteScrolling.m */; };
+		BC7B28BA20EE68D2006D471A /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B28AF20EE68D1006D471A /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m */; };
+		BC7B28BB20EE68D2006D471A /* DragTableGestureObserver_ot.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B28B020EE68D1006D471A /* DragTableGestureObserver_ot.m */; };
+		BC7B28BC20EE68D2006D471A /* DragTableFooterView_ot.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B28B120EE68D1006D471A /* DragTableFooterView_ot.m */; };
+		BC7B28BD20EE68D2006D471A /* DragTableHeaderView_ot.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B28B220EE68D1006D471A /* DragTableHeaderView_ot.m */; };
+		BC7B28BE20EE68D2006D471A /* UIScrollView+DragTableSafeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B28B320EE68D1006D471A /* UIScrollView+DragTableSafeAnimation.m */; };
+		BC7B28BF20EE68D2006D471A /* blueArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7B28B520EE68D1006D471A /* blueArrow@2x.png */; };
+		BC7B28C020EE68D2006D471A /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7B28B620EE68D1006D471A /* blueArrow.png */; };
+		BC7B28C120EE68D2006D471A /* UITableView+DragLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B28B920EE68D1006D471A /* UITableView+DragLoad.m */; };
+		BC7B28C620EE763D006D471A /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B28C420EE763D006D471A /* MenuViewController.m */; };
+		BC7B28C720EE763D006D471A /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7B28C520EE763D006D471A /* MenuViewController.xib */; };
+		BC7B28CC20EE7670006D471A /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B28CA20EE7670006D471A /* MenuTableViewCell.m */; };
+		BC7B28CD20EE7670006D471A /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC7B28CB20EE7670006D471A /* MenuTableViewCell.xib */; };
+		BC7B28D020EE7832006D471A /* ic_logout.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BC7B28CE20EE7831006D471A /* ic_logout.jpeg */; };
+		BC7B28D120EE7832006D471A /* ic_about.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BC7B28CF20EE7831006D471A /* ic_about.jpeg */; };
+		BC7B28D520EE7917006D471A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7B28D420EE7917006D471A /* SWRevealViewController.m */; };
+		BC7B28D720EE80B9006D471A /* ic_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7B28D620EE80B8006D471A /* ic_menu.png */; };
 		BC8554AC20C639A700A46314 /* SceenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8554AA20C639A700A46314 /* SceenViewController.m */; };
 		BC8554AD20C639A700A46314 /* SceenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC8554AB20C639A700A46314 /* SceenViewController.xib */; };
 		BC8554AF20C639CD00A46314 /* screen.png in Resources */ = {isa = PBXBuildFile; fileRef = BC8554AE20C639CD00A46314 /* screen.png */; };
@@ -190,6 +209,38 @@
 		BC4B015A20C9845500C3F18B /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		BC4B015E20C9861100C3F18B /* history.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = history.h; sourceTree = "<group>"; };
 		BC4B015F20C9861100C3F18B /* history.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = history.m; sourceTree = "<group>"; };
+		BC7B288320EE5EDD006D471A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BC7B28A020EE658E006D471A /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
+		BC7B28A120EE658E006D471A /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
+		BC7B28A220EE658E006D471A /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		BC7B28A320EE658E006D471A /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		BC7B28A420EE658F006D471A /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		BC7B28A920EE68D1006D471A /* DragTableGestureObserver_ot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragTableGestureObserver_ot.h; sourceTree = "<group>"; };
+		BC7B28AA20EE68D1006D471A /* ComOpenThreadOTScreenshotHelperSwizzleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComOpenThreadOTScreenshotHelperSwizzleHelper.h; sourceTree = "<group>"; };
+		BC7B28AB20EE68D1006D471A /* DragTableHeaderView_ot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragTableHeaderView_ot.h; sourceTree = "<group>"; };
+		BC7B28AC20EE68D1006D471A /* DragTableFooterView_ot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragTableFooterView_ot.h; sourceTree = "<group>"; };
+		BC7B28AD20EE68D1006D471A /* UIScrollView+DragTableSafeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+DragTableSafeAnimation.h"; sourceTree = "<group>"; };
+		BC7B28AE20EE68D1006D471A /* DragTableDragState_ot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragTableDragState_ot.h; sourceTree = "<group>"; };
+		BC7B28AF20EE68D1006D471A /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComOpenThreadOTScreenshotHelperSwizzleHelper.m; sourceTree = "<group>"; };
+		BC7B28B020EE68D1006D471A /* DragTableGestureObserver_ot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragTableGestureObserver_ot.m; sourceTree = "<group>"; };
+		BC7B28B120EE68D1006D471A /* DragTableFooterView_ot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragTableFooterView_ot.m; sourceTree = "<group>"; };
+		BC7B28B220EE68D1006D471A /* DragTableHeaderView_ot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragTableHeaderView_ot.m; sourceTree = "<group>"; };
+		BC7B28B320EE68D1006D471A /* UIScrollView+DragTableSafeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+DragTableSafeAnimation.m"; sourceTree = "<group>"; };
+		BC7B28B520EE68D1006D471A /* blueArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blueArrow@2x.png"; sourceTree = "<group>"; };
+		BC7B28B620EE68D1006D471A /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		BC7B28B820EE68D1006D471A /* UITableView+DragLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+DragLoad.h"; sourceTree = "<group>"; };
+		BC7B28B920EE68D1006D471A /* UITableView+DragLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+DragLoad.m"; sourceTree = "<group>"; };
+		BC7B28C320EE763D006D471A /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		BC7B28C420EE763D006D471A /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		BC7B28C520EE763D006D471A /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		BC7B28C920EE7670006D471A /* MenuTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
+		BC7B28CA20EE7670006D471A /* MenuTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
+		BC7B28CB20EE7670006D471A /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		BC7B28CE20EE7831006D471A /* ic_logout.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_logout.jpeg; sourceTree = "<group>"; };
+		BC7B28CF20EE7831006D471A /* ic_about.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ic_about.jpeg; sourceTree = "<group>"; };
+		BC7B28D320EE7917006D471A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		BC7B28D420EE7917006D471A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		BC7B28D620EE80B8006D471A /* ic_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_menu.png; sourceTree = "<group>"; };
 		BC8554A920C639A700A46314 /* SceenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceenViewController.h; sourceTree = "<group>"; };
 		BC8554AA20C639A700A46314 /* SceenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceenViewController.m; sourceTree = "<group>"; };
 		BC8554AB20C639A700A46314 /* SceenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SceenViewController.xib; sourceTree = "<group>"; };
@@ -330,6 +381,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC7B288420EE5EDD006D471A /* QuartzCore.framework in Frameworks */,
 				BC1B40E520D1A55100D8CD19 /* CoreGraphics.framework in Frameworks */,
 				BC1B40E320D1A54900D8CD19 /* Foundation.framework in Frameworks */,
 				BC1B40E220D1A53E00D8CD19 /* UIKit.framework in Frameworks */,
@@ -478,6 +530,94 @@
 			path = History;
 			sourceTree = "<group>";
 		};
+		BC75365A20EDD29100BD61F8 /* PullAndRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				BC7B28A020EE658E006D471A /* SVPullToRefresh.h */,
+				BC7B28A320EE658E006D471A /* UIScrollView+SVInfiniteScrolling.h */,
+				BC7B28A420EE658F006D471A /* UIScrollView+SVInfiniteScrolling.m */,
+				BC7B28A220EE658E006D471A /* UIScrollView+SVPullToRefresh.h */,
+				BC7B28A120EE658E006D471A /* UIScrollView+SVPullToRefresh.m */,
+			);
+			path = PullAndRefresh;
+			sourceTree = "<group>";
+		};
+		BC7B28A720EE68D1006D471A /* UITableViewDragLoad */ = {
+			isa = PBXGroup;
+			children = (
+				BC7B28A820EE68D1006D471A /* PrivateClass */,
+				BC7B28B420EE68D1006D471A /* Resources */,
+				BC7B28B720EE68D1006D471A /* PublicClass */,
+			);
+			path = UITableViewDragLoad;
+			sourceTree = "<group>";
+		};
+		BC7B28A820EE68D1006D471A /* PrivateClass */ = {
+			isa = PBXGroup;
+			children = (
+				BC7B28A920EE68D1006D471A /* DragTableGestureObserver_ot.h */,
+				BC7B28AA20EE68D1006D471A /* ComOpenThreadOTScreenshotHelperSwizzleHelper.h */,
+				BC7B28AB20EE68D1006D471A /* DragTableHeaderView_ot.h */,
+				BC7B28AC20EE68D1006D471A /* DragTableFooterView_ot.h */,
+				BC7B28AD20EE68D1006D471A /* UIScrollView+DragTableSafeAnimation.h */,
+				BC7B28AE20EE68D1006D471A /* DragTableDragState_ot.h */,
+				BC7B28AF20EE68D1006D471A /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m */,
+				BC7B28B020EE68D1006D471A /* DragTableGestureObserver_ot.m */,
+				BC7B28B120EE68D1006D471A /* DragTableFooterView_ot.m */,
+				BC7B28B220EE68D1006D471A /* DragTableHeaderView_ot.m */,
+				BC7B28B320EE68D1006D471A /* UIScrollView+DragTableSafeAnimation.m */,
+			);
+			path = PrivateClass;
+			sourceTree = "<group>";
+		};
+		BC7B28B420EE68D1006D471A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BC7B28B520EE68D1006D471A /* blueArrow@2x.png */,
+				BC7B28B620EE68D1006D471A /* blueArrow.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BC7B28B720EE68D1006D471A /* PublicClass */ = {
+			isa = PBXGroup;
+			children = (
+				BC7B28B820EE68D1006D471A /* UITableView+DragLoad.h */,
+				BC7B28B920EE68D1006D471A /* UITableView+DragLoad.m */,
+			);
+			path = PublicClass;
+			sourceTree = "<group>";
+		};
+		BC7B28C220EE7629006D471A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BC7B28C820EE765D006D471A /* MenuCell */,
+				BC7B28C320EE763D006D471A /* MenuViewController.h */,
+				BC7B28C420EE763D006D471A /* MenuViewController.m */,
+				BC7B28C520EE763D006D471A /* MenuViewController.xib */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		BC7B28C820EE765D006D471A /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				BC7B28C920EE7670006D471A /* MenuTableViewCell.h */,
+				BC7B28CA20EE7670006D471A /* MenuTableViewCell.m */,
+				BC7B28CB20EE7670006D471A /* MenuTableViewCell.xib */,
+			);
+			path = MenuCell;
+			sourceTree = "<group>";
+		};
+		BC7B28D220EE790F006D471A /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BC7B28D320EE7917006D471A /* SWRevealViewController.h */,
+				BC7B28D420EE7917006D471A /* SWRevealViewController.m */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		BC8554A820C6397800A46314 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,6 +698,7 @@
 		BCCA627020B856F3000FBCC9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				BC7B28C220EE7629006D471A /* Menu */,
 				BC4B014620C97C4900C3F18B /* ListPaymentData */,
 				BC4B014520C97C3F00C3F18B /* ListUser */,
 				BC8554A820C6397800A46314 /* Screen */,
@@ -602,7 +743,10 @@
 		BCCA627320B8571F000FBCC9 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				BC7B28D620EE80B8006D471A /* ic_menu.png */,
 				BCFD4B8A20CEC67F00E673F9 /* image_show_password.png */,
+				BC7B28CF20EE7831006D471A /* ic_about.jpeg */,
+				BC7B28CE20EE7831006D471A /* ic_logout.jpeg */,
 				BC8554AE20C639CD00A46314 /* screen.png */,
 				BC46793320C06C19004C3D68 /* ic_home.png */,
 				BCE4311C20BD1FFC008AFB52 /* ic_minus.png */,
@@ -625,6 +769,9 @@
 		BCCA627420B85726000FBCC9 /* Libruary */ = {
 			isa = PBXGroup;
 			children = (
+				BC7B28D220EE790F006D471A /* Menu */,
+				BC7B28A720EE68D1006D471A /* UITableViewDragLoad */,
+				BC75365A20EDD29100BD61F8 /* PullAndRefresh */,
 				BC09724C20C5ACE900C95F47 /* PaypalMobile */,
 				BC46793520C084C9004C3D68 /* Toast */,
 				BCE430FE20BD1B43008AFB52 /* MCProgress */,
@@ -882,6 +1029,7 @@
 		E937F425935DA72040966BF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC7B288320EE5EDD006D471A /* QuartzCore.framework */,
 				BC1B40E420D1A55100D8CD19 /* CoreGraphics.framework */,
 				BC1B40E120D1A53E00D8CD19 /* UIKit.framework */,
 				BC94068920C0A1BF005DC4B2 /* Bolts.framework */,
@@ -1014,10 +1162,12 @@
 				BCE4311B20BD1D7B008AFB52 /* CategoryTableViewCell.xib in Resources */,
 				BCCA628120B8590F000FBCC9 /* ic_username.png in Resources */,
 				BCCA628B20B85EC2000FBCC9 /* ic_refresh.png in Resources */,
+				BC7B28D020EE7832006D471A /* ic_logout.jpeg in Resources */,
 				BCFD4B8B20CEC67F00E673F9 /* image_show_password.png in Resources */,
 				BC8554AF20C639CD00A46314 /* screen.png in Resources */,
 				BC46793220C060DD004C3D68 /* CatTableViewCell.xib in Resources */,
 				BCE4311E20BD1FFD008AFB52 /* ic_minus.png in Resources */,
+				BC7B28CD20EE7670006D471A /* MenuTableViewCell.xib in Resources */,
 				BCE430E720BD0CF0008AFB52 /* Restaurent.sqlite in Resources */,
 				BC4B015620C9837700C3F18B /* HistoryViewController.xib in Resources */,
 				BCE430DA20BCF762008AFB52 /* InformationViewController.xib in Resources */,
@@ -1026,6 +1176,7 @@
 				BC4B014B20C97C7200C3F18B /* ListUserViewController.xib in Resources */,
 				BCE430E220BD0BD7008AFB52 /* ic_cart.png in Resources */,
 				BCCA628D20B85EE2000FBCC9 /* ic_back.png in Resources */,
+				BC7B28C720EE763D006D471A /* MenuViewController.xib in Resources */,
 				BCCA627F20B857C5000FBCC9 /* logo.png in Resources */,
 				BCCA62C920B86A59000FBCC9 /* FoodTableViewCell.xib in Resources */,
 				BCCA62BC20B8666A000FBCC9 /* table_not_select.png in Resources */,
@@ -1038,7 +1189,9 @@
 				BCCA627D20B85788000FBCC9 /* ic_background.png in Resources */,
 				BCCA62CB20B86B8F000FBCC9 /* ic_next.png in Resources */,
 				BCCA628920B85DFB000FBCC9 /* HomeViewController.xib in Resources */,
+				BC7B28D720EE80B9006D471A /* ic_menu.png in Resources */,
 				BCE4311F20BD1FFD008AFB52 /* ic_plus.png in Resources */,
+				BC7B28BF20EE68D2006D471A /* blueArrow@2x.png in Resources */,
 				BCE4312F20BD3D0E008AFB52 /* CatViewController.xib in Resources */,
 				BCCA628320B85917000FBCC9 /* ic_password.png in Resources */,
 				BC4B015120C97E0600C3F18B /* ListUserTableViewCell.xib in Resources */,
@@ -1046,6 +1199,8 @@
 				BCCA62C320B86951000FBCC9 /* FoodViewController.xib in Resources */,
 				BCE4313820BD4160008AFB52 /* OrderTableViewCell.xib in Resources */,
 				BC46793420C06C19004C3D68 /* ic_home.png in Resources */,
+				BC7B28D120EE7832006D471A /* ic_about.jpeg in Resources */,
+				BC7B28C020EE68D2006D471A /* blueArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,6 +1228,7 @@
 				BCE4310E20BD1B53008AFB52 /* MCSliceLayer.m in Sources */,
 				BCE4311A20BD1D7B008AFB52 /* CategoryTableViewCell.m in Sources */,
 				BCE430EF20BD0D4F008AFB52 /* User.m in Sources */,
+				BC7B28BA20EE68D2006D471A /* ComOpenThreadOTScreenshotHelperSwizzleHelper.m in Sources */,
 				BCCA62C220B86951000FBCC9 /* FoodViewController.m in Sources */,
 				BCCA62AA20B86200000FBCC9 /* AFURLConnectionOperation.m in Sources */,
 				BCCA62AB20B86200000FBCC9 /* AFNetworkReachabilityManager.m in Sources */,
@@ -1080,6 +1236,7 @@
 				BCE4312320BD34D3008AFB52 /* Category.m in Sources */,
 				BCE4313220BD3F37008AFB52 /* Global.m in Sources */,
 				BCE430E520BD0CE0008AFB52 /* DatabaseManager.m in Sources */,
+				BC7B28C620EE763D006D471A /* MenuViewController.m in Sources */,
 				BCCA629220B85FDD000FBCC9 /* CollectionViewCell.m in Sources */,
 				BCCA62CF20B86D16000FBCC9 /* Food.m in Sources */,
 				BCCA62AE20B86200000FBCC9 /* AFHTTPSessionManager.m in Sources */,
@@ -1090,6 +1247,9 @@
 				BCCA624620B85503000FBCC9 /* Restaurent_TrungKien.xcdatamodeld in Sources */,
 				BC46793120C060DD004C3D68 /* CatTableViewCell.m in Sources */,
 				BCCA62AF20B86200000FBCC9 /* AFURLRequestSerialization.m in Sources */,
+				BC7B28CC20EE7670006D471A /* MenuTableViewCell.m in Sources */,
+				BC7B28D520EE7917006D471A /* SWRevealViewController.m in Sources */,
+				BC7B28A520EE658F006D471A /* UIScrollView+SVPullToRefresh.m in Sources */,
 				BC4B016020C9861100C3F18B /* history.m in Sources */,
 				BCE4310C20BD1B53008AFB52 /* MCNewCustomLayeredView.m in Sources */,
 				BCE4310D20BD1B53008AFB52 /* MCPercentageDoughnutView.m in Sources */,
@@ -1100,10 +1260,13 @@
 				BCCA624E20B85503000FBCC9 /* main.m in Sources */,
 				BCCA628820B85DFB000FBCC9 /* HomeViewController.m in Sources */,
 				BCE430FA20BD0FED008AFB52 /* AboutViewController.m in Sources */,
+				BC7B28BE20EE68D2006D471A /* UIScrollView+DragTableSafeAnimation.m in Sources */,
 				BCE430DF20BD0AD2008AFB52 /* ListPaymentViewController.m in Sources */,
 				BCCA62C820B86A59000FBCC9 /* FoodTableViewCell.m in Sources */,
+				BC7B28A620EE658F006D471A /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				BCE4313720BD4160008AFB52 /* OrderTableViewCell.m in Sources */,
 				BC4B015020C97E0600C3F18B /* ListUserTableViewCell.m in Sources */,
+				BC7B28BC20EE68D2006D471A /* DragTableFooterView_ot.m in Sources */,
 				BCE4311420BD1D57008AFB52 /* CategoryViewController.m in Sources */,
 				BCCA623D20B85503000FBCC9 /* AppDelegate.m in Sources */,
 				BCCA62B020B86200000FBCC9 /* AFURLResponseSerialization.m in Sources */,
@@ -1111,10 +1274,13 @@
 				BC8554AC20C639A700A46314 /* SceenViewController.m in Sources */,
 				BC4B015520C9837700C3F18B /* HistoryViewController.m in Sources */,
 				BCCA62B820B862CA000FBCC9 /* Table.m in Sources */,
+				BC7B28BB20EE68D2006D471A /* DragTableGestureObserver_ot.m in Sources */,
 				BC4B015B20C9845500C3F18B /* HistoryTableViewCell.m in Sources */,
 				BCE4312920BD3D04008AFB52 /* OrderViewController.m in Sources */,
 				BCCA62D220B87002000FBCC9 /* Ulti.m in Sources */,
 				BCCA62AD20B86200000FBCC9 /* AFHTTPRequestOperation.m in Sources */,
+				BC7B28C120EE68D2006D471A /* UITableView+DragLoad.m in Sources */,
+				BC7B28BD20EE68D2006D471A /* DragTableHeaderView_ot.m in Sources */,
 				BCCA62B420B8620C000FBCC9 /* MBProgressHUD.m in Sources */,
 				BCE4310B20BD1B53008AFB52 /* MCNewCustomLayer.m in Sources */,
 			);
