@@ -54,15 +54,11 @@
 - (void)refresh
 {
     [_collectionView.refreshControl endRefreshing];
-    
-    
     [self.collectionView reloadData];
 }
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:true];
-    
     [self getDataFromAPI];
-    
 }
 - (void)insertRowAtTop {
     int64_t delayInSeconds = 2.0;
