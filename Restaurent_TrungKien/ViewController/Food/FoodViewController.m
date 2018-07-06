@@ -25,15 +25,19 @@
 @implementation FoodViewController {
     NSMutableArray *arrFood;
     NSMutableArray *arrFoodDevice;
+    NSMutableArray *arrFoodAddData;
     int i;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    i = 0;
     arrFoodDevice = [[NSMutableArray alloc]init];
     arrFood = [[NSMutableArray alloc]init];
+    
     [_tblView registerNib:[UINib nibWithNibName:@"FoodTableViewCell" bundle:nil] forCellReuseIdentifier:@"FoodTableViewCell"];
     _lblTitle.text = [NSString stringWithFormat:@"Table %@",_tableNumber];
+    
     [self.tblView addPullToRefreshWithActionHandler:^{
         [self insertRowAtTop];
     }];
@@ -42,37 +46,53 @@
     [self.tblView addInfiniteScrollingWithActionHandler:^{
         [self insertRowAtBottom];
     }];
+    [self getDataFromAPI];
+   arrFoodAddData = [[NSMutableArray alloc]initWithArray:arrFood];
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    _tblView.refreshControl = refreshControl;
     // Do any additional setup after loading the view from its nib.
 }
+- (void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView
+{
+    if( _tblView.refreshControl.isRefreshing )
+        [self refresh];
+}
+- (void)refresh
+{
+    [_tblView.refreshControl endRefreshing];
+    
+    
+    [self.tblView reloadData];
+}
 - (void)insertRowAtTop {
+   
     int64_t delayInSeconds = 2.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         i = 0;
-        [arrFoodDevice removeAllObjects];
-        Food *f = [arrFood objectAtIndex:0];
-        [arrFoodDevice addObject:f];
-        [_tblView reloadData];
+        [self getDataFromAPI];
+        _tblView.showsInfiniteScrolling = NO;
         [self.tblView.infiniteScrollingView stopAnimating];
     });
+    
 }
 
 
 - (void)insertRowAtBottom {
-
     
     int64_t delayInSeconds = 2.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        i++;
+        i = 1;
         [self getDataFromAPI];
         [self.tblView.infiniteScrollingView stopAnimating];
     });
+  
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:true];
-    [self getDataFromAPI];
+  
    
 }
 - (void)viewDidAppear:(BOOL)animated {
@@ -80,10 +100,8 @@
 }
 #pragma mark Get data
 -(void) getDataFromAPI {
-    
-    [arrFoodDevice removeAllObjects];
+    [arrFood removeAllObjects];
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSString *url = [NSString stringWithFormat:@"%@%@",BASE_URL,CATEGORY];
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
@@ -99,27 +117,33 @@
         [Ulti saveArrayObjectToNSUserDefault:arrFood forkey:ARR_CATEGORY_SAVE_KEY];
         NSArray *arrFoodSelected= [[NSArray alloc]init];
         [Ulti saveArrayObjectToNSUserDefault:arrFoodSelected forkey:ARR_FOOD_SELECTED_SAVE_KEY];
-        for (int j=0; j<=i; j++) {
-            Food *f = [arrFood objectAtIndex:j];
-            [arrFoodDevice addObject:f];
+        // arrFoodAddData = [[NSMutableArray alloc]initWithArray:arrFood];
+        if (i == 0) {
+            [arrFoodAddData removeAllObjects];
         }
+        for (int j=0; j<arrFood.count; j++) {
+            Food *f = [arrFood objectAtIndex:j];
+            [arrFoodAddData addObject:f];
+        }
+        [self.tblView.refreshControl endRefreshing];
         [_tblView reloadData];
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
         
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:YES];
+        [self.tblView.refreshControl endRefreshing];
         
     }];
 }
 #pragma Table View
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return arrFoodDevice.count;
+    return arrFoodAddData.count;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return (100 - tableView.bounds.size.height/8)?100:tableView.bounds.size.height/8;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    Food *food = [arrFoodDevice objectAtIndex:indexPath.row];
+    Food *food = [arrFoodAddData objectAtIndex:indexPath.row];
     FoodTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FoodTableViewCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     NSURL *url = [NSURL URLWithString:food.foodImage];
@@ -133,7 +157,7 @@
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    Food *food = [arrFoodDevice objectAtIndex:indexPath.row];
+    Food *food = [arrFoodAddData objectAtIndex:indexPath.row];
     CategoryViewController *cat = [[CategoryViewController alloc]init];
     cat.idCategory = food.foodID;
     cat.tableNumber = _tableNumber;
