@@ -41,8 +41,6 @@
     [self.tblView addPullToRefreshWithActionHandler:^{
         [self insertRowAtTop];
     }];
-    
-    // setup infinite scrolling
     [self.tblView addInfiniteScrollingWithActionHandler:^{
         [self insertRowAtBottom];
     }];
@@ -52,6 +50,7 @@
     _tblView.refreshControl = refreshControl;
     // Do any additional setup after loading the view from its nib.
 }
+#pragma mark load more + refresh
 - (void)scrollViewDidEndDecelerating:(UIScrollView*)scrollView
 {
     if( _tblView.refreshControl.isRefreshing )
